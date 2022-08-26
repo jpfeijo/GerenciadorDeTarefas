@@ -12,7 +12,7 @@ import SwiftUI
 struct PaginaInicial: View {
     
     //var classeA = ContentView()
-    @State private var tarefas: [Tarefa] = [Tarfa(nome:"adhso", addInfo: " jaisjia")]
+    @State private var tarefas: [Tarefa] = [Tarefa(nome:"T1", addInfo: " Exemplo"), ]
     
     @State private var showDetails = false
     
