@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		498255BA28A6AC7B00363DD1 /* PaginaInicial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498255B928A6AC7B00363DD1 /* PaginaInicial.swift */; };
+		49DB22BB28A5890200B34EAA /* Tarefa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DB22BA28A5890200B34EAA /* Tarefa.swift */; };
 		49E0CD1728A4A15E008F2BF2 /* GerenciadorDeTarefasSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E0CD1628A4A15E008F2BF2 /* GerenciadorDeTarefasSwiftUIApp.swift */; };
 		49E0CD1928A4A15E008F2BF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E0CD1828A4A15E008F2BF2 /* ContentView.swift */; };
 		49E0CD1B28A4A164008F2BF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E0CD1A28A4A164008F2BF2 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		498255B928A6AC7B00363DD1 /* PaginaInicial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaInicial.swift; sourceTree = "<group>"; };
+		49DB22BA28A5890200B34EAA /* Tarefa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarefa.swift; sourceTree = "<group>"; };
 		49E0CD1328A4A15E008F2BF2 /* GerenciadorDeTarefasSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GerenciadorDeTarefasSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E0CD1628A4A15E008F2BF2 /* GerenciadorDeTarefasSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerenciadorDeTarefasSwiftUIApp.swift; sourceTree = "<group>"; };
 		49E0CD1828A4A15E008F2BF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 			children = (
 				49E0CD1628A4A15E008F2BF2 /* GerenciadorDeTarefasSwiftUIApp.swift */,
 				49E0CD1828A4A15E008F2BF2 /* ContentView.swift */,
+				498255B928A6AC7B00363DD1 /* PaginaInicial.swift */,
+				49DB22BA28A5890200B34EAA /* Tarefa.swift */,
 				49E0CD1A28A4A164008F2BF2 /* Assets.xcassets */,
 				49E0CD1C28A4A164008F2BF2 /* Preview Content */,
 			);
@@ -259,6 +265,8 @@
 			files = (
 				49E0CD1928A4A15E008F2BF2 /* ContentView.swift in Sources */,
 				49E0CD1728A4A15E008F2BF2 /* GerenciadorDeTarefasSwiftUIApp.swift in Sources */,
+				49DB22BB28A5890200B34EAA /* Tarefa.swift in Sources */,
+				498255BA28A6AC7B00363DD1 /* PaginaInicial.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

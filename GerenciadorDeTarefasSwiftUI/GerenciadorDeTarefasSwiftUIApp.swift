@@ -11,7 +11,24 @@ import SwiftUI
 struct GerenciadorDeTarefasSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView{
+                NavigationView {
+                    ContentView()
+//                tarefa: Tarefas().primary
+                }
+                .tabItem {
+                    Image(systemName: "plus.circle.fill")
+                    Text("Add Task")
+                }
+                
+                NavigationView {
+                    PaginaInicial()
+                }
+                .tabItem {
+                    Image(systemName: "pencil.circle.fill")
+                    Text("Tasks")
+                }
+            }
         }
     }
 }
