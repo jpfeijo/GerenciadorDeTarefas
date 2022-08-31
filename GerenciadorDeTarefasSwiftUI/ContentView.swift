@@ -11,11 +11,10 @@ struct ContentView: View {
     
     @State private var nome: String = ""
     @State private var addInfo: String = ""
-    @State public var tarefasB: [Tarefa] = []
+    @State var tarefasB: [Tarefa] = []
     @FocusState private var inputFocused: Bool
     
     var body: some View {
-//        var t = Tarefa(nome: "Null",addInfo: "Null")
             
         VStack{
             TextField("Name", text: $nome)

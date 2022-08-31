@@ -10,15 +10,12 @@ import SwiftUI
 
 
 struct PaginaInicial: View {
-    
-    //var classeA = ContentView()
-    @State private var tarefas: [Tarefa] = [Tarefa(nome:"T1", addInfo: " Exemplo"), ]
-    
+
     @State private var showDetails = false
+    var tarefas = ContentView().tarefasB
     
     var body: some View {
-        //tentativa de usar o conteudo do array da outra classe
-        //tarefas = ContentView().tarefasB
+        
         VStack() {
             NavigationView {
                 ScrollView(.vertical, showsIndicators: false) {

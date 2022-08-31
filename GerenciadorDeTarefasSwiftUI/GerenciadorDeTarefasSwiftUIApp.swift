@@ -14,7 +14,7 @@ struct GerenciadorDeTarefasSwiftUIApp: App {
             TabView{
                 NavigationView {
                     ContentView()
-//                tarefa: Tarefas().primary
+
                 }
                 .tabItem {
                     Image(systemName: "plus.circle.fill")
