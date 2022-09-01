@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @State private var nome: String = ""
     @State private var addInfo: String = ""
-    @State var tarefasB: [Tarefa] = []
+    @Binding var tarefasB: [Tarefa]
     @FocusState private var inputFocused: Bool
     
     var body: some View {
@@ -36,11 +36,11 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
 
 private extension ContentView {
     func submit(){

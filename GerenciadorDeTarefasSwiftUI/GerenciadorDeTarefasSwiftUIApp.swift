@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct GerenciadorDeTarefasSwiftUIApp: App {
+    @State var tarefas : [Tarefa] = []
     var body: some Scene {
         WindowGroup {
             TabView{
                 NavigationView {
-                    ContentView()
+                    ContentView(tarefasB: $tarefas)
 
                 }
                 .tabItem {
@@ -22,7 +23,7 @@ struct GerenciadorDeTarefasSwiftUIApp: App {
                 }
                 
                 NavigationView {
-                    PaginaInicial()
+                    PaginaInicial(tarefas: $tarefas)
                 }
                 .tabItem {
                     Image(systemName: "pencil.circle.fill")

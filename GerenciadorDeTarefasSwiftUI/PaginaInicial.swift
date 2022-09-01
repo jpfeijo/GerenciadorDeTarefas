@@ -12,7 +12,7 @@ import SwiftUI
 struct PaginaInicial: View {
 
     @State private var showDetails = false
-    var tarefas = ContentView().tarefasB
+    @Binding var tarefas : [Tarefa]
     
     var body: some View {
         
@@ -60,9 +60,9 @@ struct PaginaInicial: View {
     }
 }
 
-struct PaginaInicial_Previews: PreviewProvider {
-    static var previews: some View {
-        PaginaInicial()
-
-    }
-}
+//struct PaginaInicial_Previews: PreviewProvider {
+//    static var previews: some View {
+//        //PaginaInicial(tarefas: $[])
+//
+//    }
+//}
