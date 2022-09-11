@@ -11,14 +11,14 @@ import SwiftUI
 
 struct PaginaInicial: View {
 
-    @State private var showDetails = false
     @Binding var tarefas : [Tarefa]
+    
     
     var body: some View {
         
         VStack() {
             NavigationView {
-                ScrollView(.vertical, showsIndicators: false) {
+                ScrollView(. vertical, showsIndicators: false) {
                     if tarefas.isEmpty {
                         Text("You don't have any tasks assigned")
                             .font(.largeTitle)
@@ -26,43 +26,42 @@ struct PaginaInicial: View {
                             .padding(.bottom)
                     } else {
                         ForEach(tarefas) { task in
-                            Button {
-                                showDetails.toggle()
+                            NavigationLink{
+                                List{
+                                    Section{
+                                        Text(task.addInfo)
+                                        Text(task.tipoTarefa)
+                                    } header: {
+                                        Text(task.nome)
+                                    }
+                                    .headerProminence(.increased)
+                                }
+                                .listStyle(.insetGrouped)
                             } label: {
-                                Text(task.nome)
+                                Label(task.nome, systemImage: "pencil.tip.crop.circle.badge.plus")
                                     .frame(width: 300, height: 40)
                             }
                             .buttonStyle(.borderedProminent)
                             .buttonBorderShape(.capsule)
-                            .tint(.indigo)
                             .textFieldStyle(.roundedBorder)
-                            if showDetails {
-                                HStack{
-                                    Text(task.addInfo)
-                                        .font(.largeTitle)
-                                    
-                    //tentativa de criar o botão de remover a tarefa
-    //                                Button{
-    //                                    tarefas.remove(task)
-    //                                } label: {
-    //                                    Text("Done")
-    //                                }
-                                    
-                                    
-                                }
-                            }
                         }
+                        Button("Remove tasks"){
+                            tarefas.removeAll()
+                        }
+                        .tint(.indigo)
+                        .buttonStyle(.borderedProminent)
+                        .keyboardShortcut(.defaultAction)
                     }
                 }
             }
-            .navigationBarTitle(Text("Tasks"))
+            .navigationBarTitle("Tasks")
         }
     }
 }
 
 //struct PaginaInicial_Previews: PreviewProvider {
 //    static var previews: some View {
-//        //PaginaInicial(tarefas: $[])
+//        PaginaInicial($tarefas = [Tarefa])
 //
 //    }
 //}

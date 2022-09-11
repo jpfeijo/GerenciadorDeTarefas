@@ -13,15 +13,17 @@ struct Tarefa: Identifiable {
         }
     var nome: String
     var addInfo: String
+    var tipoTarefa: String
 
-
-    init(nome: String, addInfo: String){
+    init(nome: String, addInfo: String, tipoTarefa: String){
         self.nome = nome
         self.addInfo = addInfo
+        self.tipoTarefa = tipoTarefa
     }
     
     init(nome: String){
         self.nome = nome
         self.addInfo = ""
+        self.tipoTarefa = ""
     }
 }
