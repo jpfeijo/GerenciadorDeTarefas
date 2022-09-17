@@ -38,24 +38,62 @@ struct PaginaInicial: View {
                                 }
                                 .listStyle(.insetGrouped)
                             } label: {
-                                Label(task.nome, systemImage: "pencil.tip.crop.circle.badge.plus")
+                                Label(task.nome, systemImage: decideIcone(valorInserido: task.tipoTarefa))
                                     .frame(width: 300, height: 40)
                             }
+                            .tint(decideCor(valorInserido: task.tipoTarefa))
                             .buttonStyle(.borderedProminent)
                             .buttonBorderShape(.capsule)
                             .textFieldStyle(.roundedBorder)
                         }
-                        Button("Remove tasks"){
+                        Button{
                             tarefas.removeAll()
+                        } label: {
+                            Label("Clear", systemImage: "trash.fill")
                         }
-                        .tint(.indigo)
-                        .buttonStyle(.borderedProminent)
+                        .tint(.red)
+                        .buttonStyle(.bordered)
                         .keyboardShortcut(.defaultAction)
+                        .buttonBorderShape(.capsule)
                     }
                 }
             }
             .navigationBarTitle("Tasks")
         }
+    }
+}
+
+func decideIcone(valorInserido: String) -> String{
+    switch valorInserido {
+    case "Others":
+        return "pencil.tip.crop.circle.badge.plus"
+    case "Sports":
+        return "figure.walk"
+    case "Family":
+        return "heart.fill"
+    case "Studies":
+        return "highlighter"
+    case "Health":
+        return "pills.fill"
+    default:
+        return "pencil.tip.crop.circle.badge.plus"
+    }
+}
+
+func decideCor(valorInserido: String) -> Color{
+    switch valorInserido {
+    case "Others":
+        return Color.indigo
+    case "Sports":
+        return Color.mint
+    case "Family":
+        return Color.red
+    case "Studies":
+        return Color.yellow
+    case "Health":
+        return Color.green
+    default:
+        return Color.indigo
     }
 }
 

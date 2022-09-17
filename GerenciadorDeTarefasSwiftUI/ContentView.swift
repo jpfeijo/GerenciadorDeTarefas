@@ -34,14 +34,14 @@ struct ContentView: View {
                     Text("Family").tag(Tipo.Family)
                     Text("Sports").tag(Tipo.Sports)
             }
-                Button("Add Task") {
+            Button("Add Task") {
                     submit()
                     nome = ""
                     addInfo = ""
                     selectedType = .Others
                 }
-                .tint(.indigo)
-                .buttonStyle(.borderedProminent)
+                .tint(.green)
+                .buttonStyle(.bordered)
                 .keyboardShortcut(.defaultAction)
             }
             .disableAutocorrection(true)
